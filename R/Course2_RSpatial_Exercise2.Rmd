@@ -36,7 +36,7 @@ code {
 }
 </style>
 
-# <span class='exercise'>Exercise 2</span>
+# <span class='exercise'> Course 2 Exercise 2</span>
 
 **Exercise 2.1: Using data on green spaces in Berlin, estimate the number of wild boars observed inside green areas that are 1 ha or larger. What is the proportion of wild boars outside large green areas? Visualize the observations on a map showing the green spaces and the observations encoded by their location inside or outside the green spaces.**
 
