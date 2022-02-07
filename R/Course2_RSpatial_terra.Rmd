@@ -40,7 +40,7 @@ code {
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
                       fig.width = 9, fig.height = 6, dev = "ragg_png")
-knitr::opts_knit$set(root.dir = 'C:/Users/kramer/PopDynIZW Dropbox/Steph Kramer/_GitHub')
+#knitr::opts_knit$set(root.dir = 'C:/Users/kramer/PopDynIZW Dropbox/Steph Kramer/_GitHub')
 ```
 
 # Introduction
@@ -55,13 +55,27 @@ matrices and lists. There is no need to know tidyverse/dplyr coding style.
 
 This course provides the basics for using the most important spatial
 data types — vector (points, lines, polygons, aka ESRI shapefiles) and raster data.
-In R, these are _Spatial*DataFrame_ (the * can stand for *Points*, *Lines* or
-*Polygons*, respectively, i.e. *SpatialPointsDataFrame*) or *RasterLayer* Objects.
+In R, these are `Spatial*DataFrame` (the * can stand for *Points*, *Lines* or
+*Polygons*, respectively, i.e. `SpatialPointsDataFrame`) or `RasterLayer` Objects.
 
-Recently, *sf* objects have been developed to handle vector data more easily. The
-latter can be treated like simple data.frames. Also the *raster* package is
-under development — called *terra* package - the course is updated to use the
-new *terra* package. The *terra* package is especially useful for remote sensing data.
+Recently, `{sf}` objects have been developed to handle vector data more easily. The
+latter can be treated like simple data.frames. Also the `{raster}` package is
+under development — called `{terra}` package - the course is updated to use the
+new `{terra}` package. 
+
+The `{terra}` package provides the same functionality while merging some 
+of the old classes and function names from the `{raster}` and being much faster. It is also especially 
+useful for remote sensing data.
+
+`{terra}` has a single class `SpatRaster` class for which raster has three 
+(`RasterLayer`, `RasterStack`, `RasterBrick`). Likewise there is a single class 
+for vector data `SpatVector` that replaces six `Spatial*` classes. Most
+method names are the same, but note the following important differences in 
+methods names with the `{raster}` package:
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "functions-terra-raster.png"))
+```
 
 In addition to different data types, the course provides sections on coordinate
 projections and the most important geospatial operations. Last but not least -
@@ -89,59 +103,59 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 
 ## Useful (web)sites
 
-**1. R news and tutorials**
-+ http://www.r-bloggers.com/
+**1. R news and tutorials**  
+* http://www.r-bloggers.com/  
 
 **2. Quick introduction to spatial R**
-+ https://rspatial.org/
-+ http://pakillo.github.io/R-GIS-tutorial/
-+ http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html
+* https://rspatial.org/  
+* http://pakillo.github.io/R-GIS-tutorial/  
+* http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html  
 
 **3. Spatial visualisation**
 * check out the packages `{tmap}`, `{ggmap}`, `{leaflet}` and `{cartography}`
-* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html
+* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html  
 * A whole book: https://clauswilke.com/dataviz/ with spatial data here:
-  https://clauswilke.com/dataviz/geospatial-data.html
+  https://clauswilke.com/dataviz/geospatial-data.html  
 
-**4. Overview of spatial packages**
-* http://cran.r-project.org/web/views/Spatial.html = http://cran.r-project.org/view=Spatial
-* https://www.r-spatial.org/  
+**4. Overview of spatial packages**  
+* http://cran.r-project.org/web/views/Spatial.html = http://cran.r-project.org/view=Spatial  
+* https://www.r-spatial.org/    
 
-**5. R-cheatsheets — great for learning 'vocabulary'**
-* in your folder
-* or here: https://www.rstudio.com/resources/cheatsheets/
+**5. R-cheatsheets — great for learning 'vocabulary'**  
+* in your folder  
+* or here: https://www.rstudio.com/resources/cheatsheets/  
 
-**6. Infos about simple features in R (`{sf}` package)**
-*  https://r-spatial.github.io/sf/index.html   
-*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1
-*  geocomputation: https://geocompr.robinlovelace.net/spatial-operations.html
+**6. Infos about simple features in R (`{sf}` package)**  
+*  https://r-spatial.github.io/sf/index.html  
+*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1  
+*  geocomputation: https://geocompr.robinlovelace.net/spatial-operations.html  
 
 **7. Lots of EPSG Codes**
-* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details.
+* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details.  
 * for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf
 
 **8. BioMove specials:**
 *  For analysis of  plot-based biodiversity data: package `{vegan}`
-*  For analysis of telemetry data: packages `{adehabitatHR}`, `{adehabitatLT}`, `{move}`, `{recurse}`, `{momentuHMM}`, moveHMM}`, `{ctmm}`
+*  For analysis of telemetry data: packages `{adehabitatHR}`, `{adehabitatLT}`, `{move}`, `{recurse}`, `{momentuHMM}`, `{moveHMM}`, `{ctmm}`
 
 ## Further reading
 
-**1. Check Roger Bivand's publications:**
-* http://cran.r-project.org/web/views/Spatial.html
-* http://www.csiss.org/learning_resources/index.html
-* Roger Bivand et al. 2008, Applied Spatial Data Analysis in R, Springer
+**1. Check Roger Bivand's publications:**  
+* http://cran.r-project.org/web/views/Spatial.html   
+* http://www.csiss.org/learning_resources/index.html  
+* Roger Bivand et al. 2008, Applied Spatial Data Analysis in R, Springer  
 
-**2. Check Edzer Pebesma's course materials and publications:**
-* http://ifgi.uni-muenster.de/~epebe_01/
-* https://edzer.github.io/UseR2017/  
-* https://www.rstudio.com/resources/videos/tidy-spatial-data-analysis/  
+**2. Check Edzer Pebesma's course materials and publications:**   
+* http://ifgi.uni-muenster.de/~epebe_01/  
+* https://edzer.github.io/UseR2017/   
+* https://www.rstudio.com/resources/videos/tidy-spatial-data-analysis/    
 
-**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**
-* https://geocompr.robinlovelace.net
+**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**  
+* https://geocompr.robinlovelace.net  
 
-**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**
-* https://www.cedricscherer.com/top/dataviz/
-* Codes: https://github.com/z3tt/TidyTuesday and https://github.com/z3tt/30DayMapChallenge
+**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**  
+* https://www.cedricscherer.com/top/dataviz/  
+* Codes: https://github.com/z3tt/TidyTuesday and https://github.com/z3tt/30DayMapChallenge  
 
 
 # Basics
@@ -149,17 +163,21 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 ## How to install...
 
 ```{r package-install}
-pkgs = c("terra", "stars", "rgdal", "rgeos", "rasterVis", "sf",  
-         "ggplot2", "tmap", "viridis", "patchwork", "here", "units")
-# install.packages(pkgs)
-# update.packages()
+pkgs <- c("terra", "stars", "rgdal", "rgeos", "rasterVis", "sf",  
+          "ggplot2", "tmap", "viridis", "patchwork", "here", "units")
+
+## install packages that are not installed yet
+## (not important to understand the following code, just run it)
+unavailable <- setdiff(pkgs, rownames(installed.packages()))
+install.packages(unavailable)
 ```
 
 ## ...and load packages
 
 ```{r libraries, warning=FALSE}
 ## working with raster data
-## do NOT load both packages terra and raster, as this creates problems with the namespace 
+## do NOT load both packages terra and raster at the same time, 
+## as this creates problems with the namespace 
 library(terra) ## the "new" {raster} package
 library(rgdal)
 library(rgeos)
