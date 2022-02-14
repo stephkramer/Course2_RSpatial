@@ -38,7 +38,8 @@ code {
 
 # <span class='exercise'> Course 2 Exercise 2</span>
 
-**Exercise 2.1:** 
+## Exercise 2.1
+
 **Using data on green spaces in Berlin, estimate the number of wild boars observed inside green areas that are 1 ha or larger. What is the proportion of wild boars outside large green areas? Visualize the observations on a map showing the green spaces and the observations encoded by their location inside or outside the green spaces.**
 
 Individual Steps:
@@ -51,7 +52,8 @@ Individual Steps:
 
 ---
 
-**Exercise 2.2:**  
+## Exercise 2.2
+
 **Calculate the average distance (in km) from each wild boar observation to water.**
 
 Individual Steps:
@@ -65,7 +67,10 @@ Hint: To calculate the minimum distance per wild boar observation, you need to "
 
 ---
 
-**Exercise 2.3 (*for the fast ones*):**  
+## Exercise 2.3
+
+*for the fast ones*
+
 **What is the average and median distance (in km) to natural reserves...**  
 
 * **a) for all wild boar observations?**  

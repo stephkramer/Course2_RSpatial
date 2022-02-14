@@ -208,14 +208,18 @@
     <h2><a href="#content">Tutorial Part II — R goes spatial: Exercise 2</a></h2>
     <div id="toc">
       <ul>
-      <li><a href="#todo-once-the-exercises-are-ready-update-the-text-below">TODO: Once the exercises are ready, update the text below!!!</a></li>
-      <li><a href="#course-2-exercise-2"><span class="exercise"> Course 2 Exercise 2</span></a></li>
+      <li><a href="#course-2-exercise-2"><span class="exercise"> Course 2 Exercise 2</span></a>
+      <ul>
+      <li><a href="#exercise-2.1">Exercise 2.1</a></li>
+      <li><a href="#exercise-2.2">Exercise 2.2</a></li>
+      <li><a href="#exercise-2.3">Exercise 2.3</a></li>
+      </ul></li>
       <li><a href="#end">END</a></li>
       </ul>
     </div>
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
                   <p class="author"><span class="glyphicon glyphicon-user"></span> Stephanie Kramer-Schadt &amp; Cédric Scherer</p>
-                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> Last Update February 7, 2022</p>
+                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> Last Update February 14, 2022</p>
           </div>
    </div>
      
@@ -245,12 +249,11 @@ code {
   color: #824b00;
 }
 </style>
-<div id="todo-once-the-exercises-are-ready-update-the-text-below" class="section level1">
-<h1>TODO: Once the exercises are ready, update the text below!!!</h1>
-</div>
 <div id="course-2-exercise-2" class="section level1">
 <h1><span class="exercise"> Course 2 Exercise 2</span></h1>
-<p><strong>Exercise 2.1:</strong> <strong>Using data on green spaces in Berlin, estimate the number of wild boars observed inside green areas that are 1 ha or larger. What is the proportion of wild boars outside large green areas? Visualize the observations on a map showing the green spaces and the observations encoded by their location inside or outside the green spaces.</strong></p>
+<div id="exercise-2.1" class="section level2">
+<h2>Exercise 2.1</h2>
+<p><strong>Using data on green spaces in Berlin, estimate the number of wild boars observed inside green areas that are 1 ha or larger. What is the proportion of wild boars outside large green areas? Visualize the observations on a map showing the green spaces and the observations encoded by their location inside or outside the green spaces.</strong></p>
 <p>Individual Steps:</p>
 <ul>
 <li><ol style="list-style-type: lower-alpha">
@@ -270,8 +273,10 @@ code {
 </ol></li>
 </ul>
 <hr />
-<p><strong>Exercise 2.2:</strong><br />
-<strong>Calculate the average distance (in km) from each wild boar observation to water.</strong></p>
+</div>
+<div id="exercise-2.2" class="section level2">
+<h2>Exercise 2.2</h2>
+<p><strong>Calculate the average distance (in km) from each wild boar observation to water.</strong></p>
 <p>Individual Steps:</p>
 <ul>
 <li><ol style="list-style-type: lower-alpha">
@@ -289,14 +294,18 @@ code {
 </ul>
 <p>Hint: To calculate the minimum distance per wild boar observation, you need to “union” all polygons into a single multipolygon first! (otherwise you get all distances from all observations to every single polygon!)</p>
 <hr />
-<p><strong>Exercise 2.3 (<em>for the fast ones</em>):</strong><br />
-<strong>What is the average and median distance (in km) to natural reserves…</strong></p>
+</div>
+<div id="exercise-2.3" class="section level2">
+<h2>Exercise 2.3</h2>
+<p><em>for the fast ones</em></p>
+<p><strong>What is the average and median distance (in km) to natural reserves…</strong></p>
 <ul>
 <li><strong>a) for all wild boar observations?</strong><br />
 </li>
 <li><strong>b) for wild boars seen outside of nature reserves?</strong></li>
 </ul>
 <p>Hint: The information on nature reserves is contained in the green space data set. Check the help if you do not know what to look for.</p>
+</div>
 </div>
 <div id="end" class="section level1">
 <h1>END</h1>
@@ -306,7 +315,7 @@ code {
 Session Info
 </summary>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2022-02-07 18:03:36 CET&quot;</code></pre>
+<pre><code>## [1] &quot;2022-02-14 15:53:22 CET&quot;</code></pre>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>## R version 4.1.2 (2021-11-01)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
