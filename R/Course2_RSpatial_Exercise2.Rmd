@@ -78,6 +78,14 @@ Hint: To calculate the minimum distance per wild boar observation, you need to "
 
 Hint: The information on nature reserves is contained in the green space data set. Check the help if you do not know what to look for.
 
+---
+
+## Exercise 2.4
+
+*for the fast ones*
+
+**What is the average distance (in km) to natural reserves that contain water bodies for all wild boar observations?**  
+
 # END
 
 ---
