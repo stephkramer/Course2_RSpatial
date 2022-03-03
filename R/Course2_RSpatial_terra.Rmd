@@ -164,7 +164,8 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 
 ```{r package-install}
 pkgs <- c("terra", "stars", "rgdal", "rgeos", "rasterVis", "sf",  
-          "ggplot2", "tmap", "viridis", "patchwork", "here", "units")
+          "ggplot2", "tmap", "viridis", "patchwork", "here", "units",
+          "rnaturalearth", "osmdata", "elevatr")
 
 ## install packages that are not installed yet
 ## (not important to understand the following code, just run it)
@@ -1631,6 +1632,134 @@ st_write(obj = insidePA,
          delete_layer = TRUE)
 ```
 <br>
+
+
+# Data Sources
+
+## `{rnaturalearth}`
+
+[NaturalEarth](http://www.naturalearthdata.com) (http://www.naturalearthdata.com) is a public domain map data set that features vector and raster data of physical and cultural properties. It is available at 1:10m, 1:50m, and 1:110 million scales.
+
+[`{rnaturalearth}`](https://docs.ropensci.org/rnaturalearth) (https://docs.ropensci.org/rnaturalearth) is an R package to hold and facilitate interaction with NaturalEarth map data. 
+
+After loading the package, you can for example quickly access shapefiles of all countries that are already projected and can be stored as either `sp` or `sf` objects:
+
+```{r data-rnaturalearth}
+library(rnaturalearth)
+
+## store as sp object (SpatialPolygonsDataFrame)
+world <- ne_countries() ## `returnclass = "sp"` by default
+class(world)
+
+## store as sf object (simple features)
+world <- ne_countries(returnclass = "sf")
+class(world)
+
+sf::st_crs(world)[1]
+```
+
+This country data set (which is actually not downloaded but stored locally by installing the package) already contains several useful variables, mostly referring to different naming conventions (helpful when joining with other data sets), to identify continents and regions, and also some information on population size, GDP, and economy:
+
+```{r names-world-rnaturalearth}
+names(world)
+```
+
+We can quickly plot it:
+
+```{r plot-world-rnaturalearth, fig.height=3.5}
+ggplot(world) + geom_sf(aes(fill = economy)) + theme_void()
+```
+
+You can specify the scale, category and type you want as in the examples below.
+
+```{r glacier-rnaturalearth, fig.height=4.5, fig.show="hold"}
+glacier_small <- ne_download(type = "glaciated_areas", category = "physical", 
+                             scale = "small", returnclass = "sf")
+
+glacier_large <- ne_download(type = "glaciated_areas", category = "physical", 
+                             scale = "large", returnclass = "sf")
+
+ggplot(glacier_small) + 
+  geom_sf(color = "grey40", fill = "grey40") + 
+  theme_void()
+
+ggplot(glacier_large) + 
+  geom_sf(color = "grey40", fill = "grey40") + 
+  theme_void()
+```
+
+
+```{r relief-rnaturalearth, fig.height=4.5}
+relief <- ne_download(type = "MSR_50M", category = "raster",
+                      scale = 50, returnclass = "sf")
+
+plot(relief)
+```
+<br>
+
+## `{osmdata}`
+
+[OpenStreetMap](https://www.openstreetmap.org) (https://www.openstreetmap.org) is a collaborative project to create a free editable geographic database of the world. The geodata underlying the maps is considered the primary output of the project and is accessible from R via the `{osmdata}` package.
+
+We first need to define our query and limit it to a region. ou can explore the features and tags (also available as information via OpenStreetMap directly).
+
+```{r data-osmdata}
+library(osmdata)
+
+## explore features + tags
+head(available_features())
+head(available_tags("craft"))
+
+## building the query
+beekeeper_query <- 
+  getbb("Berlin") %>%
+  opq() %>%
+  add_osm_feature("craft", "beekeeper")
+  
+## download data
+sf_beekeepers <- osmdata_sf(beekeeper_query)
+```
+
+Now we can investigate beekeepers in Berlin:
+
+```{r plot-osmdata, fig.height=5.5}
+names(sf_beekeepers)
+
+head(sf_beekeepers$osm_points)
+
+beekeper_locations <- sf_beekeepers$osm_points
+
+ggplot(beekeper_locations) + 
+  geom_sf(data = d6berlin::sf_berlin) +
+  geom_sf(size = 2) +
+  theme_void()
+```
+
+## `{elevatr}`
+
+The [`{elevatr}`](https://github.com/jhollist/elevatr/) (https://github.com/jhollist/elevatr/) is an R package that provides access to elevation data from AWS Open Data Terrain Tiles and the Open Topography Global data sets API for raster digital elevation models (DEMs).
+
+We first need to define a location or bounding box for our elevation data. This can either be a daat frame or a spatial object. We use an `sf` object which holds the projection to be used when assessing the elevation data:
+
+```{r bbox-elevatr, fig.height=4.5}
+library(elevatr)
+
+bbox_usa <- data.frame(x = c(-125.0011, -66.9326), 
+                   y = c(24.9493, 49.5904))
+
+sf_bbox_usa <- st_as_sf(bbox_usa, coords = c("x", "y"), crs = 4326)
+```
+
+Now we can download the elevation data with a specified resolution (ranging from 1 to 14 with 1 being very coarse and 14 being very fine).
+
+```{r data-plot-elevatr, fig.height=5.2}
+elev_usa <- get_elev_raster(locations = sf_bbox_usa, z = 5)
+
+plot(elev_usa)
+```
+
+
+# Advanced Map with `{tmap}`
 
 At the end, a beautiful plot: 
 
