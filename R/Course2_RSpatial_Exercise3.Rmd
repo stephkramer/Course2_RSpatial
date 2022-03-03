@@ -62,6 +62,7 @@ Individual Steps:
 * c. Load the tree cover data set (`tree_cover_density_2012_100m_3035.asc` in `_DataBerlin`).
 * d. Calculate average tree cover per buffer by extracting the mean tree cover per polygon.
 * e. Visualize the results as map with the point color encoding the average tree cover for each site.
+* f. Explore the relationship of bird counts and average tree cover per site by visualizing the data as scatter plot (advanced: add a linear fitting).
 
 ---
 
