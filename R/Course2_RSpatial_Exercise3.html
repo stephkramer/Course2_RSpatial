@@ -213,13 +213,14 @@
       <li><a href="#exercise-3.1">Exercise 3.1</a></li>
       <li><a href="#exercise-3.2">Exercise 3.2</a></li>
       <li><a href="#exercise-3.3">Exercise 3.3</a></li>
+      <li><a href="#exercise-3.4">Exercise 3.4</a></li>
       </ul></li>
       <li><a href="#end">END</a></li>
       </ul>
     </div>
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
                   <p class="author"><span class="glyphicon glyphicon-user"></span> Stephanie Kramer-Schadt &amp; Cédric Scherer</p>
-                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> Last Update February 14, 2022</p>
+                        <p class="date"><span class="glyphicon glyphicon-calendar"></span> Last Update March 3, 2022</p>
           </div>
    </div>
      
@@ -291,11 +292,33 @@ code {
 <li><ol start="5" style="list-style-type: lower-alpha">
 <li>Visualize the results as map with the point color encoding the average tree cover for each site.</li>
 </ol></li>
+<li><ol start="6" style="list-style-type: lower-alpha">
+<li>Explore the relationship of bird counts and average tree cover per site by visualizing the data as scatter plot (advanced: add a linear fitting).</li>
+</ol></li>
 </ul>
 <hr />
 </div>
 <div id="exercise-3.3" class="section level2">
 <h2>Exercise 3.3</h2>
+<p><strong>Calculate the share of the area covered by green spaces (using the vector data from the <code>{d6berlin}</code> package) inside each of the buffered sites.</strong></p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Load data for green spaces in Berlin and project it with the same CRS as our bird data.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Extract green spaces inside the buffered sites.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-alpha">
+<li>Calculate the area of green spaces for each buffer.</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: lower-alpha">
+<li>Turn the estimates into shares by dividing the values by the area of a buffer.</li>
+</ol></li>
+</ul>
+<hr />
+</div>
+<div id="exercise-3.4" class="section level2">
+<h2>Exercise 3.4</h2>
 <p><em>for the fast ones</em></p>
 <p><strong>What is the average tree cover per site <u>within forests</u>? How large is the difference between both metrics?</strong></p>
 <p>Individual Steps:</p>
@@ -329,7 +352,7 @@ code {
 Session Info
 </summary>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.time</span>()</span></code></pre></div>
-<pre><code>## [1] &quot;2022-02-14 15:53:59 CET&quot;</code></pre>
+<pre><code>## [1] &quot;2022-03-03 15:07:41 CET&quot;</code></pre>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div>
 <pre><code>## R version 4.1.2 (2021-11-01)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)

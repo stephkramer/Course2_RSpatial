@@ -66,7 +66,18 @@ Individual Steps:
 
 ---
 
-## Exercise 3.3 
+## Exercise 3.3
+
+**Calculate the share of the area covered by green spaces (using the vector data from the `{d6berlin}` package) inside each of the buffered sites.**
+
+* a. Load data for green spaces in Berlin and project it with the same CRS as our bird data.
+* b. Extract green spaces inside the buffered sites.
+* c. Calculate the area of green spaces for each buffer.
+* d. Turn the estimates into shares by dividing the values by the area of a buffer.
+
+---
+
+## Exercise 3.4
 
 *for the fast ones*
 
