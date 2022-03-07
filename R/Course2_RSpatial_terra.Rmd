@@ -103,57 +103,57 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 
 ## Useful (web)sites
 
-**1. R news and tutorials**  
+**1. R news and tutorials**  <br>
 * http://www.r-bloggers.com/  
+<br>
+**2. Quick introduction to spatial R**<br>
+* https://rspatial.org/   <br>  
+* http://pakillo.github.io/R-GIS-tutorial/    <br>  
+* http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html <br> 
 
-**2. Quick introduction to spatial R**
-* https://rspatial.org/  
-* http://pakillo.github.io/R-GIS-tutorial/  
-* http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html  
-
-**3. Spatial visualisation**
-* check out the packages `{tmap}`, `{ggmap}`, `{leaflet}` and `{cartography}`
-* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html  
-* A whole book: https://clauswilke.com/dataviz/ with spatial data here:
+**3. Spatial visualisation** <br>
+* check out the packages `{tmap}`, `{ggmap}`, `{leaflet}` and `{cartography}`  <br>
+* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html   <br> 
+* A whole book: https://clauswilke.com/dataviz/ with spatial data here: <br>
   https://clauswilke.com/dataviz/geospatial-data.html  
+<br>
+**4. Overview of spatial packages** <br>  
+* http://cran.r-project.org/web/views/Spatial.html =  <br>   http://cran.r-project.org/view=Spatial  
+* https://www.r-spatial.org/  <br>  
 
-**4. Overview of spatial packages**  
-* http://cran.r-project.org/web/views/Spatial.html = http://cran.r-project.org/view=Spatial  
-* https://www.r-spatial.org/    
+**5. R-cheatsheets — great for learning 'vocabulary'**   <br>
+* in your folder  <br>
+* or here: https://www.rstudio.com/resources/cheatsheets/    <br>
 
-**5. R-cheatsheets — great for learning 'vocabulary'**  
-* in your folder  
-* or here: https://www.rstudio.com/resources/cheatsheets/  
-
-**6. Infos about simple features in R (`{sf}` package)**  
-*  https://r-spatial.github.io/sf/index.html  
-*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1  
+**6. Infos about simple features in R (`{sf}` package)** <br> 
+*  https://r-spatial.github.io/sf/index.html  <br>
+*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1  <br>  
 *  geocomputation: https://geocompr.robinlovelace.net/spatial-operations.html  
-
-**7. Lots of EPSG Codes**
-* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details.  
+<br>
+**7. Lots of EPSG Codes**  <br>
+* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details. <br> 
 * for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf
-
-**8. BioMove specials:**
-*  For analysis of  plot-based biodiversity data: package `{vegan}`
+<br>
+**8. BioMove specials:** <br>
+*  For analysis of  plot-based biodiversity data: package `{vegan}`  <br>
 *  For analysis of telemetry data: packages `{adehabitatHR}`, `{adehabitatLT}`, `{move}`, `{recurse}`, `{momentuHMM}`, `{moveHMM}`, `{ctmm}`
-
+<br><br>
 ## Further reading
 
-**1. Check Roger Bivand's publications:**  
+**1. Check Roger Bivand's publications:**  <br> 
 * http://cran.r-project.org/web/views/Spatial.html   
 * http://www.csiss.org/learning_resources/index.html  
 * Roger Bivand et al. 2008, Applied Spatial Data Analysis in R, Springer  
 
-**2. Check Edzer Pebesma's course materials and publications:**   
+**2. Check Edzer Pebesma's course materials and publications:**  <br> 
 * http://ifgi.uni-muenster.de/~epebe_01/  
 * https://edzer.github.io/UseR2017/   
 * https://www.rstudio.com/resources/videos/tidy-spatial-data-analysis/    
 
-**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**  
+**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**  <br>
 * https://geocompr.robinlovelace.net  
 
-**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**  
+**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**  <br>
 * https://www.cedricscherer.com/top/dataviz/  
 * Codes: https://github.com/z3tt/TidyTuesday and https://github.com/z3tt/30DayMapChallenge  
 
@@ -234,9 +234,9 @@ A possible folder structure could be:
 
 ``` bash
 ├── TUB_BD_Course                   # root folder 
-│   └── _Data_Borneo                # the Borneo data
-│       └── BaseMaps                # geo data, found in _Data_Borneo
-│       └── BaseRecords             # animal observation data in _Data_Borneo
+│   └── _DataBorneo                 # the Borneo data
+│       └── BaseMaps                # geo data, found in _DataBorneo
+│       └── BaseRecords             # animal observation data in _DataBorneo
 │   └── R                           # store here all your scripts, i.e.
 │       └── script_course1.R
 │       └── script_course2.R
@@ -292,9 +292,9 @@ Now, we assign the path to these folders relative to the root directory:
 
 ``` bash
 ├── root_wd                    # TUB_BD_Course 
-│   └── dbor_wd                # _Data_Borneo
-│       └── maps_wd            # BaseMaps
-│       └── recs_wd            # BaseRecords
+│   └── dbor_wd                #    _DataBorneo
+│       └── maps_wd            #       BaseMaps
+│       └── recs_wd            #       BaseRecords
 ```
 
 ```{r dirs}
@@ -321,13 +321,15 @@ Finally, your folder structure will look like this:
 
 ``` bash
 ├── TUB_BD_Course                   # root folder 
-│   └── _Data_Borneo                # the Borneo data
+│   └── _DataBorneo                 # the Borneo data
 │       └── BaseMaps                # geo data, found in _Data_Borneo
 │       └── BaseRecords             # animal observation data in _Data_Borneo
 │   └── R                           # store here all your scripts, i.e.
 │       └── script_course1.R
 │       └── script_course2.R
 │   └── output                      # for any results/ plots,...
+│   
+│   └ (TUB_BD_course.Rproj          # only in case you are working with an R-Project
 
 ```
 <br>
@@ -358,7 +360,7 @@ Should this be empty, then you have wrongly set the root directory and the data 
 <br>
 `matrix()`  :  see above
 <br>
-`list()`    :  [[element]], i.e. `mylist[[1]]`. Attention! A list element can consist of a data.frame, that you can then access like that: `mylist[[1]][1,2]`...
+`list()`    :  [[element]], i.e. `mylist[[1]]`. Attention! A list element can consist of a data.frame that you can then access like that: `mylist[[1]][1,2]`...
 <br>
 *S4-objects* (like spatial data)  :  access via `@`, i.e. `RasterLayer@data@values`
 
@@ -411,7 +413,8 @@ systems (CRS), map projections, and geographic and projected coordinates.
 
 If a map already has a defined CRS, then you cannot simply overwrite this! To
 transform the coordinates, e.g. angular coordinates of latitude/ longitude of WGS84, 
-into a projected CRS with planar coordinates (e.g. equal area of Lambert Azimuthal),
+into a projected CRS with planar coordinates (e.g. meter distances, equal area of 
+Lambert Azimuthal),
 you need to *transform* it (see below chapter **Raster Projection**).
 
 <br>
