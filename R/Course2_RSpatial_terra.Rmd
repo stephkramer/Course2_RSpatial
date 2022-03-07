@@ -107,8 +107,8 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 * http://www.r-bloggers.com/  
 <br>
 **2. Quick introduction to spatial R**<br>
-* https://rspatial.org/   <br>  
-* http://pakillo.github.io/R-GIS-tutorial/    <br>  
+* https://rspatial.org/    
+* http://pakillo.github.io/R-GIS-tutorial/   
 * http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html <br> 
 
 **3. Spatial visualisation** <br>
@@ -117,7 +117,7 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 * A whole book: https://clauswilke.com/dataviz/ with spatial data here: <br>
   https://clauswilke.com/dataviz/geospatial-data.html  
 <br>
-**4. Overview of spatial packages** <br>  
+**4. Overview of spatial packages** 
 * http://cran.r-project.org/web/views/Spatial.html =  <br>   http://cran.r-project.org/view=Spatial  
 * https://www.r-spatial.org/  <br>  
 
@@ -127,13 +127,13 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 
 **6. Infos about simple features in R (`{sf}` package)** <br> 
 *  https://r-spatial.github.io/sf/index.html  <br>
-*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1  <br>  
+*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1    
 *  geocomputation: https://geocompr.robinlovelace.net/spatial-operations.html  
 <br>
 **7. Lots of EPSG Codes**  <br>
 * Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details. <br> 
-* for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf
-<br>
+* for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pd <br> <br>
+
 **8. BioMove specials:** <br>
 *  For analysis of  plot-based biodiversity data: package `{vegan}`  <br>
 *  For analysis of telemetry data: packages `{adehabitatHR}`, `{adehabitatLT}`, `{move}`, `{recurse}`, `{momentuHMM}`, `{moveHMM}`, `{ctmm}`
