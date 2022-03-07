@@ -329,7 +329,7 @@ Finally, your folder structure will look like this:
 │       └── script_course2.R
 │   └── output                      # for any results/ plots,...
 │   
-│   └ (TUB_BD_course.Rproj          # only in case you are working with an R-Project
+│   └ <TUB_BD_course.Rproj>         # only in case you are working with an R-Project
 
 ```
 <br>
@@ -435,6 +435,7 @@ See http://spatialreference.org/. The EPSG code for WGS84 is 4326.
 
 
 ```{r change-crs}
+# many ways to assign the CRS, options listed below:
 crs(ras_bio_asc_01) <- crs("+proj=longlat +datum=WGS84") 
 crs(ras_bio_asc_01) <- "+proj=longlat +datum=WGS84" 
 crs(ras_bio_asc_01) <- "+init=epsg:4326"
