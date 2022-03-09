@@ -9,5 +9,5 @@ and then follow the course here: [R goes Spatial](https://stephkramer.github.io/
 As a 'learning control exercise', please solve Exercise 1 in course 2 material yourself (C2_E1).
 <br> <br>
 More exercises here:
-* Course 3 Exercise 2 [C2_E2](https://stephkramer.github.io/Course2_RSpatial_Exercise2.html)
-* Course 3 Exercise 3 [C2_E3](https://stephkramer.github.io/Course2_RSpatial_Exercise3.html)
+* Course 2 Exercise 2 [C2_E2](https://stephkramer.github.io/Course2_RSpatial_Exercise2.html)
+* Course 2 Exercise 3 [C2_E3](https://stephkramer.github.io/Course2_RSpatial_Exercise3.html)
