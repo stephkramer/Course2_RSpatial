@@ -59,11 +59,11 @@ Individual Steps:
 Individual Steps:
 
 * a. Store the simple feature data `sf_water` in a local object. The data set is also provided by the `{d6berlin}` package.
-* b. To easy the handling of the data set, filter for large water bodies only (area >= 100 m^2).
+* b. To ease the handling of the data set, filter for large water bodies only (area >= 100000 m^2).
 * c. Calculate the distance between the wild boar data and the water bodies and add the information as a new column to your wild boar data set. Afterwards, convert the unit to km. 
 * d. Calculate the mean of all estimated distances. 
 
-Hint: To calculate the minimum distance per wild boar observation, you need to "union" all polygons into a single multipolygon first! (otherwise you get all distances from all observations to every single polygon!)
+Hint: To calculate the minimum distance per wild boar observation, you need to "union" all polygon features into a single multipolygon first! (otherwise you get all distances from all observations to every single polygon feature!)
 
 ---
 
