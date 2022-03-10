@@ -35,7 +35,6 @@ code {
   color: #824b00;
 }
 </style>
----
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, 
@@ -1717,7 +1716,7 @@ plot(relief)
 
 [OpenStreetMap](https://www.openstreetmap.org) (https://www.openstreetmap.org) is a collaborative project to create a free editable geographic database of the world. The geodata underlying the maps is considered the primary output of the project and is accessible from R via the `{osmdata}` package.
 
-We first need to define our query and limit it to a region. ou can explore the features and tags (also available as information via OpenStreetMap directly).
+We first need to define our query and limit it to a region. You can explore the features and tags (also available as information via OpenStreetMap directly).
 
 ```{r data-osmdata}
 library(osmdata)
@@ -1728,8 +1727,11 @@ head(available_tags("craft"))
 
 ## building the query, e.g. beekeepers
 beekeeper_query <- 
+  ## you can automatically retrieve a boudning box (pr specify one manually)
   getbb("Berlin") %>%
+  ## build an Overpass query
   opq() %>%
+  ## access particular feature
   add_osm_feature("craft", "beekeeper")
   
 ## download data
@@ -1760,9 +1762,11 @@ We first need to define a location or bounding box for our elevation data. This 
 ```{r bbox-elevatr, fig.height=4.5}
 library(elevatr)
 
+## manually specify corners of the bounding box of the US
 bbox_usa <- data.frame(x = c(-125.0011, -66.9326), 
                    y = c(24.9493, 49.5904))
 
+## turn into spatial, projected bounding box
 sf_bbox_usa <- st_as_sf(bbox_usa, coords = c("x", "y"), crs = 4326)
 ```
 
@@ -1841,11 +1845,7 @@ For the additional question: <br>
 * k. Extract the tree cover within a buffer of 100m around each wild boar location (hint: use the help to inspect the arguments of `extract()`). 
 * l. Create a plot that shows the tree cover (y axis) based on the group size (box plot + raw data).
 
-<br>
-
-# END
-
----
+<br><hr><br>
 
 <details><summary>Session Info</summary>
 
