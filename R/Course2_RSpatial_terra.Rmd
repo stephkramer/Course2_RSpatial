@@ -103,57 +103,57 @@ https://lkcnhm.nus.edu.sg/app/uploads/2017/06/S33rbz018-041-1.pdf
 
 ## Useful (web)sites
 
-**1. R news and tutorials**  
+**1. R news and tutorials**  <br>
 * http://www.r-bloggers.com/  
+<br>
+**2. Quick introduction to spatial R**<br>
+* https://rspatial.org/    
+* http://pakillo.github.io/R-GIS-tutorial/   
+* http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html <br> 
 
-**2. Quick introduction to spatial R**
-* https://rspatial.org/  
-* http://pakillo.github.io/R-GIS-tutorial/  
-* http://rstudio-pubs-static.s3.amazonaws.com/7993_6b081819ba184047802a508a7f3187cb.html  
-
-**3. Spatial visualisation**
-* check out the packages `{tmap}`, `{ggmap}`, `{leaflet}` and `{cartography}`
-* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html  
-* A whole book: https://clauswilke.com/dataviz/ with spatial data here:
+**3. Spatial visualisation** <br>
+* check out the packages `{tmap}`, `{ggmap}`, `{leaflet}` and `{cartography}`  <br>
+* https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html   <br> 
+* A whole book: https://clauswilke.com/dataviz/ with spatial data here: <br>
   https://clauswilke.com/dataviz/geospatial-data.html  
+<br>
+**4. Overview of spatial packages** 
+* http://cran.r-project.org/web/views/Spatial.html =  <br>   http://cran.r-project.org/view=Spatial  
+* https://www.r-spatial.org/  <br>  
 
-**4. Overview of spatial packages**  
-* http://cran.r-project.org/web/views/Spatial.html = http://cran.r-project.org/view=Spatial  
-* https://www.r-spatial.org/    
+**5. R-cheatsheets — great for learning 'vocabulary'**   <br>
+* in your folder  <br>
+* or here: https://www.rstudio.com/resources/cheatsheets/    <br>
 
-**5. R-cheatsheets — great for learning 'vocabulary'**  
-* in your folder  
-* or here: https://www.rstudio.com/resources/cheatsheets/  
-
-**6. Infos about simple features in R (`{sf}` package)**  
-*  https://r-spatial.github.io/sf/index.html  
-*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1  
+**6. Infos about simple features in R (`{sf}` package)** <br> 
+*  https://r-spatial.github.io/sf/index.html  <br>
+*  and nice intro: https://oliviergimenez.github.io/introspatialR/#1    
 *  geocomputation: https://geocompr.robinlovelace.net/spatial-operations.html  
+<br>
+**7. Lots of EPSG Codes**  <br>
+* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details. <br> 
+* for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pd <br> <br>
 
-**7. Lots of EPSG Codes**
-* Use EPSG codes as unique and specific identifies of your coordinate reference systems instead of writing projection details.  
-* for EPSG codes see http://spatialreference.org/ or https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf
-
-**8. BioMove specials:**
-*  For analysis of  plot-based biodiversity data: package `{vegan}`
+**8. BioMove specials:** <br>
+*  For analysis of  plot-based biodiversity data: package `{vegan}`  <br>
 *  For analysis of telemetry data: packages `{adehabitatHR}`, `{adehabitatLT}`, `{move}`, `{recurse}`, `{momentuHMM}`, `{moveHMM}`, `{ctmm}`
-
+<br><br>
 ## Further reading
 
-**1. Check Roger Bivand's publications:**  
+**1. Check Roger Bivand's publications:**  <br> 
 * http://cran.r-project.org/web/views/Spatial.html   
 * http://www.csiss.org/learning_resources/index.html  
 * Roger Bivand et al. 2008, Applied Spatial Data Analysis in R, Springer  
 
-**2. Check Edzer Pebesma's course materials and publications:**   
+**2. Check Edzer Pebesma's course materials and publications:**  <br> 
 * http://ifgi.uni-muenster.de/~epebe_01/  
 * https://edzer.github.io/UseR2017/   
 * https://www.rstudio.com/resources/videos/tidy-spatial-data-analysis/    
 
-**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**  
+**3. Geocomputation with R: a open-access book of Robin Lovelace, Jakub Nowosad & Jannes Muenchow**  <br>
 * https://geocompr.robinlovelace.net  
 
-**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**  
+**4. DataVizArt  Cedric Scherer -> check out his #TidyTuesday or #30DaysMapChallenge contributions**  <br>
 * https://www.cedricscherer.com/top/dataviz/  
 * Codes: https://github.com/z3tt/TidyTuesday and https://github.com/z3tt/30DayMapChallenge  
 
@@ -234,9 +234,9 @@ A possible folder structure could be:
 
 ``` bash
 ├── TUB_BD_Course                   # root folder 
-│   └── _Data_Borneo                # the Borneo data
-│       └── BaseMaps                # geo data, found in _Data_Borneo
-│       └── BaseRecords             # animal observation data in _Data_Borneo
+│   └── _DataBorneo                 # the Borneo data
+│       └── BaseMaps                # geo data, found in _DataBorneo
+│       └── BaseRecords             # animal observation data in _DataBorneo
 │   └── R                           # store here all your scripts, i.e.
 │       └── script_course1.R
 │       └── script_course2.R
@@ -292,9 +292,9 @@ Now, we assign the path to these folders relative to the root directory:
 
 ``` bash
 ├── root_wd                    # TUB_BD_Course 
-│   └── dbor_wd                # _Data_Borneo
-│       └── maps_wd            # BaseMaps
-│       └── recs_wd            # BaseRecords
+│   └── dbor_wd                #    _DataBorneo
+│       └── maps_wd            #       BaseMaps
+│       └── recs_wd            #       BaseRecords
 ```
 
 ```{r dirs}
@@ -321,13 +321,15 @@ Finally, your folder structure will look like this:
 
 ``` bash
 ├── TUB_BD_Course                   # root folder 
-│   └── _Data_Borneo                # the Borneo data
+│   └── _DataBorneo                 # the Borneo data
 │       └── BaseMaps                # geo data, found in _Data_Borneo
 │       └── BaseRecords             # animal observation data in _Data_Borneo
 │   └── R                           # store here all your scripts, i.e.
 │       └── script_course1.R
 │       └── script_course2.R
 │   └── output                      # for any results/ plots,...
+│   
+│   └ <TUB_BD_course.Rproj>         # only in case you are working with an R-Project
 
 ```
 <br>
@@ -358,7 +360,7 @@ Should this be empty, then you have wrongly set the root directory and the data 
 <br>
 `matrix()`  :  see above
 <br>
-`list()`    :  [[element]], i.e. `mylist[[1]]`. Attention! A list element can consist of a data.frame, that you can then access like that: `mylist[[1]][1,2]`...
+`list()`    :  [[element]], i.e. `mylist[[1]]`. Attention! A list element can consist of a data.frame that you can then access like that: `mylist[[1]][1,2]`...
 <br>
 *S4-objects* (like spatial data)  :  access via `@`, i.e. `RasterLayer@data@values`
 
@@ -411,7 +413,8 @@ systems (CRS), map projections, and geographic and projected coordinates.
 
 If a map already has a defined CRS, then you cannot simply overwrite this! To
 transform the coordinates, e.g. angular coordinates of latitude/ longitude of WGS84, 
-into a projected CRS with planar coordinates (e.g. equal area of Lambert Azimuthal),
+into a projected CRS with planar coordinates (e.g. meter distances, equal area of 
+Lambert Azimuthal),
 you need to *transform* it (see below chapter **Raster Projection**).
 
 <br>
@@ -432,6 +435,7 @@ See http://spatialreference.org/. The EPSG code for WGS84 is 4326.
 
 
 ```{r change-crs}
+# many ways to assign the CRS, options listed below:
 crs(ras_bio_asc_01) <- crs("+proj=longlat +datum=WGS84") 
 crs(ras_bio_asc_01) <- "+proj=longlat +datum=WGS84" 
 crs(ras_bio_asc_01) <- "+init=epsg:4326"
@@ -1023,7 +1027,7 @@ round(x = global(x = predictors, stat = 'mean'), digits = 2) ## `global()` -> `c
 ```
 <br>
 
-## Data export
+## Data export - saving raster data
 
 Save the raster (not the plot...): There are many exchange formats for rasters. 
 The best choice is considered to be GeoTiff, which also saves the projection and is smaller than 
@@ -1232,7 +1236,11 @@ River_shp  <- st_read(dsn = maps_wd, layer = "sn_100000")
 
 ### the 'old' sp package would work with the `readOGR` command from the `{rgdal}` package:
 Admin_shp <- readOGR(dsn = maps_wd, layer = "borneo_admin",)[,c(1:3,5,7,17,18)]
+```
 
+#### Transformations between simple feature '{sf}' and SpatialPolygonsDataFrame '{sp}'
+
+```{r sf-versus-sp2}
 ## transformations
 Admin_sf <- as(Admin_shp, "sf") ## from sp object to sf object 
 Admin_sp <- as(Admin_sf, "Spatial") ## from sf to sp object
@@ -1311,7 +1319,7 @@ which(x = PA_shp$COUNTRY == 'Malaysia')
 
 ## Visualising vector data
 
-### `{ggplot2` package
+### `{ggplot2}` package
 
 You can use many packages, e.g. `{ggplot2}`, to plot `{sf}` objects:
 https://www.r-spatial.org/r/2018/10/25/ggplot2-sf.html.
@@ -1398,16 +1406,17 @@ tm_shape(shp = Borneo_shp) +
 
 <br>
 
-### Small exercises
+### Small exercises, and saving vector data
 
-Simplify your life! Work with subsets, select Malaysia, save and plot as shapefile:
+Simplify your life! Work with subsets, select Malaysia, save and plot as shapefile
+with st_write():
 
 ```{r work-with-subsets, fig.height=10.5}
 Mal_PA_shp <- subset(PA_shp, PA_shp$COUNTRY == 'Malaysia')
 
 st_write(obj = Mal_PA_shp, 
          dsn = output_wd, 
-         layer = 'test',
+         layer = 'ProtectedAreasMalaysia',
          driver = 'ESRI Shapefile', 
          delete_layer = TRUE)
 
@@ -1419,7 +1428,7 @@ tm_shape(shp = Borneo_shp) +
 ```
 <br>
 
-Extract elevation per PA and save average to a.t. as a new column
+Extract elevation per PA and save average to a.t. as a new column:
 
 ```{r extract-elevation-layer}
 fewPA <- Mal_PA_shp[c(1:5), 1]
@@ -1427,11 +1436,13 @@ tmp <- extract(x = ras_bio_asc_24, y = vect(fewPA), xy = TRUE) ## returns a list
 str(tmp)
 #lapply(tmp, FUN = summary)
 ```
-
+Append mean elevation:
 ```{r appenad-mean-elevation}
-## Append mean elevation:
-#fewPA$mean_elevation <- round(x = unlist(lapply(tmp, FUN = mean, na.rm = TRUE))) ## STEPH: tapply()?
-mean_tmp <- aggregate(tmp$bio_asc_24, by = list(Category = tmp$ID), FUN = mean) ## STEPH: for now solved stepwise with aggregate()
+## a bit complicated:
+# fewPA$mean_elevation <- round(x = unlist(lapply(tmp, FUN = mean, na.rm = TRUE))) 
+
+## ...or for now solved stepwise with aggregate()
+mean_tmp <- aggregate(tmp$bio_asc_24, by = list(Category = tmp$ID), FUN = mean) 
 
 ## dplyr approach:
 #mean_tmp <- dplyr::summarize(dplyr::group_by(tmp, ID), x = mean(bio_asc_24, na.rm = TRUE))
@@ -1459,8 +1470,9 @@ https://geocompr.robinlovelace.net/spatial-operations.html
 <br>
 
 
-## Spatial query
+## Spatial queries and transformations
 
+### Area calculation
 Returns the area in square meters:
 
 ```{r sf-area}
@@ -1469,7 +1481,10 @@ head(st_area(x = Borneo_shp))
 ```
 <br>
 
-### Spatial transformation (projection)
+### CRS projection
+
+If no CRS is assigned for a file, the CRS can be set with st_crs(). However, if a file 
+has already a CRS, e.g. WGS84 (angular units, longitude and latitude), and you want to change into a projection with planar units (e.g. meters), use st_transform().
 
 ```{r sf-transform}
 Borneo_shp_moll <-  st_transform(Borneo_shp, c("+proj=moll +datum=WGS84"))
@@ -1542,7 +1557,7 @@ always. Please always check whether the projection is set:
 ```{r check-projection}
 pt_shp <- st_read(dsn = paste0(recs_wd, "/FCsim.shp"))
 pt_shp  ## crs is missing!
-st_crs(pt_shp) <- 4326 ## set it with command st_crs
+st_crs(pt_shp) <- 4326 ## set it with command st_crs()
 pt_shp
 ```
 
@@ -1609,7 +1624,7 @@ nrow(insidePA) ## 11
 ```
 <br>
 
-### Vector and raster data
+### Vector and raster data interaction
 
 ```{r spatial-overlay-2}
 # for a RASTER: extract mean ann. temp. from ras_bio_asc_01
@@ -1640,7 +1655,7 @@ st_write(obj = insidePA,
 
 [NaturalEarth](http://www.naturalearthdata.com) (http://www.naturalearthdata.com) is a public domain map data set that features vector and raster data of physical and cultural properties. It is available at 1:10m, 1:50m, and 1:110 million scales.
 
-[`{rnaturalearth}`](https://docs.ropensci.org/rnaturalearth) (https://docs.ropensci.org/rnaturalearth) is an R package to hold and facilitate interaction with NaturalEarth map data. 
+[`{rnaturalearth}`](https://docs.ropensci.org/rnaturalearth) (https://docs.ropensci.org/rnaturalearth) is an R package to hold and facilitate interaction with NaturalEarth (ne_...) map data. 
 
 After loading the package, you can for example quickly access shapefiles of all countries that are already projected and can be stored as either `sp` or `sf` objects:
 
@@ -1688,6 +1703,7 @@ ggplot(glacier_large) +
   theme_void()
 ```
 
+Relief data
 
 ```{r relief-rnaturalearth, fig.height=4.5}
 relief <- ne_download(type = "MSR_50M", category = "raster",
@@ -1710,7 +1726,7 @@ library(osmdata)
 head(available_features())
 head(available_tags("craft"))
 
-## building the query
+## building the query, e.g. beekeepers
 beekeeper_query <- 
   getbb("Berlin") %>%
   opq() %>%
@@ -1739,7 +1755,7 @@ ggplot(beekeper_locations) +
 
 The [`{elevatr}`](https://github.com/jhollist/elevatr/) (https://github.com/jhollist/elevatr/) is an R package that provides access to elevation data from AWS Open Data Terrain Tiles and the Open Topography Global data sets API for raster digital elevation models (DEMs).
 
-We first need to define a location or bounding box for our elevation data. This can either be a daat frame or a spatial object. We use an `sf` object which holds the projection to be used when assessing the elevation data:
+We first need to define a location or bounding box for our elevation data. This can either be a data frame or a spatial object. We use an `sf` object which holds the projection to be used when assessing the elevation data:
 
 ```{r bbox-elevatr, fig.height=4.5}
 library(elevatr)
@@ -1750,7 +1766,7 @@ bbox_usa <- data.frame(x = c(-125.0011, -66.9326),
 sf_bbox_usa <- st_as_sf(bbox_usa, coords = c("x", "y"), crs = 4326)
 ```
 
-Now we can download the elevation data with a specified resolution (ranging from 1 to 14 with 1 being very coarse and 14 being very fine).
+Now we can download the elevation data with a specified resolution z (ranging from 1 to 14 with 1 being very coarse and 14 being very fine).
 
 ```{r data-plot-elevatr, fig.height=5.2}
 elev_usa <- get_elev_raster(locations = sf_bbox_usa, z = 5)
@@ -1818,8 +1834,7 @@ Follow these steps to answer the questions:
 * g. Visualize the temperature at each wild boar observation (y axis) for sunny and other weather (box and whisker plot + raw data). 
 * h. Save the wild boar observations with the local temperature information as an .Rds file.
 
-For the additional question: 
-<br>
+For the additional question: <br>
 
 * i. Load the tree cover data set (`tree_cover_density_2012_100m_3035.asc` in `_DataBerlin`).
 * j. Inspect the data set by plotting the raster using the R basic plot function.
